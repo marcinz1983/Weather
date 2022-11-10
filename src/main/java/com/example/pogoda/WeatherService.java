@@ -30,11 +30,11 @@ public class WeatherService {
     private final WebClient_Weather webClient_weather;
     private final WeatherRepository weatherRepository;
 
-    List<String> cities = Arrays.asList("Gdansk", "Warszawa", "Rzeszow", "Zakopane", "London");
+    List<String> cities = Arrays.asList("Zakopane");
 
 
     // @PostConstruct
-    @Scheduled(fixedRate = 60 * 1000)
+    @Scheduled(fixedRate = 100 * 1000)
     private void saveWeatherAnyOneMinute() {
         for (String city : cities)
             SaveWeatherToDB(city);
